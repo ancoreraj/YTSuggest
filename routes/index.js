@@ -64,12 +64,12 @@ router.post('/suggest-video', async (req, res) => {
   try {
     const { link } = req.body
 
-    if (!youtube_parser(link)) {
-      let message = 'Please enter a valid youtube link.'
-      const allEmail = await User.find({})
-      const number = allEmail.length
-      res.render('pages/home', { message, number })
-    }
+    // if (!youtube_parser(link)) {
+    //   let message = 'Please enter a valid youtube link.'
+    //   const allEmail = await User.find({})
+    //   const number = allEmail.length
+    //   res.render('pages/home', { message, number })
+    // }
 
     const newSuggestions = new Suggestions({
       link,
