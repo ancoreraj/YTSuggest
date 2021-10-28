@@ -1,0 +1,23 @@
+{
+  "name": "secret_message",
+  "version": "2.0.0",
+  "description": "Node.js authentication with Passport",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Ankur Raj",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "moment": "^2.29.1",
+    "mongoose": "^5.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
