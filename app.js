@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 const path = require('path')
 const app = express();
+const cors = require('cors')
 
 dotenv.config({ path: './config/config.env' })
 
@@ -15,17 +16,14 @@ mongoose
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
-// EJS
-app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')))
-
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.json())
+app.use(cors())
 // Routes
 app.use('/', require('./routes/index.js'));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server running on  ${PORT}`));

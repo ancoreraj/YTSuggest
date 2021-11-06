@@ -74,6 +74,7 @@ html,body{
 padding: 0;
 margin: 0;
 font-size: 18px;
+margin-top: -65px;
 }
 
 .alert__msg{

@@ -5,6 +5,15 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  confirmationCode: {
+    type: String,
+    required: true
+  },
+  status: {
+    type: String, 
+    enum: ['Pending', 'Active'],
+    default: 'Pending'
+  },
   date: {
     type: String,
     required: true
